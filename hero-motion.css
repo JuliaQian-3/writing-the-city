@@ -1,0 +1,6 @@
+.hero-track{position:relative;min-height:215svh;background:#ed007f}
+.hero-track #home{position:sticky;top:0;height:100svh;min-height:100svh}
+.hero-title h1 span{will-change:transform;transform-origin:center center}
+.hero-title{transform-origin:center center}
+@media(max-width:750px){.hero-track{min-height:135svh}}
+@media(prefers-reduced-motion:reduce){.hero-track{min-height:100svh}.hero-track #home{position:relative}.hero-title h1 span{will-change:auto}}
