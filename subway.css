@@ -1,0 +1,15 @@
+#subway{position:relative;height:600svh;background:#08090a;color:#f6f4e9}
+.subway-announcement .warning-yellow{color:#ffeb29}
+.subway-announcement .warning-magenta{color:#ed007f}
+.subway-announcement{position:absolute;top:50%;left:0;margin:0;z-index:4;white-space:nowrap;pointer-events:none;font-family:CityDIN,'Arial Narrow',sans-serif;font-weight:700;font-size:clamp(72px,13vw,230px);line-height:1;letter-spacing:-.025em;color:#f6f4e9;text-shadow:0 2px 14px #0008;visibility:hidden;will-change:transform}
+.subway-sticky{position:sticky;top:0;height:100svh;overflow:hidden}
+#subway-stage{position:absolute;inset:0;touch-action:pan-y}
+#subway-stage canvas{display:block;width:100%;height:100%}
+.subway-caption,.subway-footer{position:absolute;left:3vw;right:3vw;display:flex;align-items:center;justify-content:space-between;z-index:2;pointer-events:none;font-family:CityAcumin,Arial,sans-serif;font-size:11px;letter-spacing:.04em}
+.subway-caption{top:30px;right:150px;justify-content:flex-start;gap:28px}
+.subway-footer{bottom:25px}
+.subway-footer a{display:flex;align-items:center;gap:12px;pointer-events:auto;color:inherit;text-decoration:none;padding:12px 0;transition:color .25s}
+.subway-footer a:hover{color:#ec007f}
+.subway-footer svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8}
+@media(max-width:750px){#subway{height:600svh}.subway-caption,.subway-footer{font-size:9px}.subway-footer>span{display:none}}
+@media(prefers-reduced-motion:reduce){#subway{height:100svh}}

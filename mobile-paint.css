@@ -1,0 +1,20 @@
+.mobile-paint-tools{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:100;display:flex;gap:8px;align-items:center;font:12px CityAcumin,Arial,sans-serif}
+.mobile-paint-tools[hidden],.mobile-paint-actions[hidden]{display:none}
+.mobile-paint-toggle{width:50px;height:54px;display:grid;place-items:center;background:#f6f4e9;color:#171916;border:1px solid currentColor;box-shadow:0 3px 12px #0002;transition:background-color .32s ease,color .32s ease,border-color .32s ease;touch-action:manipulation}
+.mobile-paint-toggle svg{width:25px;height:34px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linejoin:round}
+.mobile-paint-tools.is-painting .mobile-paint-toggle{background:#ed007f;color:#fff;border-color:#ed007f}
+.mobile-paint-actions{position:absolute;right:58px;bottom:3px;display:flex;color:#171916;visibility:hidden;pointer-events:none;transition:visibility 0s .86s}
+.mobile-paint-tools.is-painting .mobile-paint-actions{visibility:visible;pointer-events:auto;transition:visibility 0s}
+.mobile-paint-actions button{min-height:48px;padding:0 12px;background:#f6f4e9;color:inherit;font-size:11px;opacity:0;transform:translateX(4px);transition:opacity .56s cubic-bezier(.33,0,.2,1) var(--hide-delay),transform .64s cubic-bezier(.22,1,.36,1) var(--hide-delay)}
+.mobile-paint-tools.is-painting .mobile-paint-actions button{opacity:1;transform:translateX(0);transition:opacity .56s cubic-bezier(.33,0,.2,1) var(--reveal-delay),transform .64s cubic-bezier(.22,1,.36,1) var(--reveal-delay)}
+.mobile-paint-actions [data-action="done"]{--reveal-delay:0ms;--hide-delay:220ms}
+.mobile-paint-actions [data-action="clear"]{--reveal-delay:110ms;--hide-delay:110ms}
+.mobile-paint-actions [data-action="undo"]{--reveal-delay:220ms;--hide-delay:0ms}
+.mobile-paint-actions [data-action="done"]{background:#ffeb29}
+.mobile-painting,.mobile-painting body,.mobile-painting main,.mobile-painting main *,.mobile-painting dialog,.mobile-painting dialog *{touch-action:none!important;overscroll-behavior:none}
+.mobile-painting main,.mobile-painting dialog{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.touch-paint-ui #can{display:none!important}
+.touch-spray-feedback{position:fixed;left:0;top:0;width:0;height:0;pointer-events:none;z-index:99;display:none}
+.touch-spray-feedback::after{content:"";position:absolute;width:22px;height:22px;left:-11px;top:-11px;border:1px solid #f6f4e9;border-radius:50%;box-shadow:0 0 0 1px #17191655}
+.touch-spray-feedback.is-visible{display:block}
+@media(prefers-reduced-motion:reduce){.mobile-paint-toggle,.mobile-paint-actions,.mobile-paint-tools.is-painting .mobile-paint-actions,.mobile-paint-actions button,.mobile-paint-tools.is-painting .mobile-paint-actions button{transition:none}}

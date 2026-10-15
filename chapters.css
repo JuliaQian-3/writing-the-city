@@ -2,6 +2,9 @@
 @media(max-width:750px){.chapter-overview{padding:30px 6vw 45px}.chapter-title,.chapter-2 .chapter-title,.chapter-3 .chapter-title,.chapter-5 .chapter-title,.chapter-6 .chapter-title,.chapter-7 .chapter-title{font-size:14vw;max-width:100%;margin:32px 0}.chapter-title>span{margin-left:0!important}.chapter-4 .chapter-title{font-size:25vw}.chapter-grid{display:flex;flex-direction:column;gap:30px}.chapter-copy{order:2!important;margin:0!important;padding:20px 0!important;width:100%}.chapter-photo{margin:0!important;max-width:100%;width:100%}.secondary-photo{align-self:flex-end;width:40%;order:3}.poem-copy,.prose-copy{font-size:17px}.chapter-5 .chapter-overview{background:#f6f4e9}.chapter-3 .chapter-copy,.chapter-7 .chapter-copy{padding:22px!important}.reading-text.poem-copy{font-size:15px}.poem-line{padding-left:calc(var(--indent,0)*.6em)}#colophon{grid-template-columns:1fr}#colophon h2{font-size:18vw}.chapter-kicker{gap:15px}#index .index-chapter{font-size:24px}.reading-surface{padding:40px 6vw}}
 .chapter-photo img{height:auto}
 .article,.chapter-overview,.chapter .chapter-end{background-color:#f6f4e9}
+/* Full-width paint surface; keep the original inset text and divider visually. */
+.chapter .chapter-end{margin:0;padding:18px 3vw 24px;border-top:0}
+.chapter .chapter-end::before{content:"";position:absolute;top:0;left:3vw;right:3vw;height:1px;background:currentColor;pointer-events:none}
 .chapter-2 .chapter-overview,.chapter-6 .chapter-overview,.chapter-2 .chapter-end,.chapter-6 .chapter-end{background-color:#ffeb29}
 .chapter-4 .chapter-overview,.chapter-4 .chapter-end{background-color:#171916}
 .read-more,.close-reading{color:inherit}
