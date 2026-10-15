@@ -1,0 +1,4 @@
+button{color:inherit;-webkit-appearance:none;appearance:none}
+.city-arrow{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:square;stroke-linejoin:miter;overflow:visible}
+#read .city-arrow{width:25px;height:25px}
+.chapter-end .city-arrow{width:1.15em;height:1.15em}

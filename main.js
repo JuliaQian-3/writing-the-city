@@ -1,4 +1,5 @@
 import * as THREE from './vendor/three.module.js';
+import './arrows.js?v=52';
 import { createSubway } from './subway.js?v=full-train-51';
 import { createMobilePaint } from './mobile-paint.js?v=smooth-35';
 import { buildChapters } from './chapters.js?v=reading-25';
